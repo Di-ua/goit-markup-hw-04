@@ -104,7 +104,6 @@ img {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 
@@ -140,13 +139,25 @@ img {
   text-decoration: none;
 }
 
-.contacts:hover,
-.contacts:focus {
+.svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.link:hover,
+.link:focus {
   color: var(--accent-text-color);
 }
 
-.contacts:active {
+.contacts-item:active {
   color: red;
+}
+
+.contacts.link {
+  display: flex;
+  align-items: center;
 }
 
 /* hero */
@@ -348,6 +359,7 @@ img {
   padding-left: 32px;
   padding-bottom: 30px;
 }
+
 .socialicons.list {
   display: flex;
   justify-content: center;
@@ -355,30 +367,76 @@ img {
 }
 
 .icon {
+  width: 20px;
+  height: 20px;
   fill: #afb1b8;
-}
-
-.icon:hover {
-  fill: #ffffff;
-}
-
-.socialicons-item {
-  text-align: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
 }
 
 .socialicons-item:not(:last-child) {
   margin-right: 10px;
 }
 
-.socialicons-item:hover,
-.socialicons-item:focus {
+.socialicons-link:hover,
+.socialicons-link:focus {
   background-color: var(--accent-background-color);
 }
 
+.socialicons-link:hover .icon,
+.socialicons-link:focus .icon {
+  fill: var(--hero-text-color);
+}
+
+.socialicons-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+/*Постоянные клиенты*/
+
+.clients.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.client.label {
+  align-items: center;
+  fill: #afb1b8;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-item {
+  width: calc((100% - 30px * 5) / 6);
+  height: 90px;
+}
+
+.clients-item:hover .label,
+.clients-item:focus .label {
+  fill: var(--accent-text-color);
+}
 /* footer */
 
 .footer {
@@ -398,7 +456,6 @@ img {
 }
 .contacts-block {
   display: inline-block;
-  width: calc((100% - 30px * 3) / 4);
 }
 
 .connect a {
@@ -406,8 +463,6 @@ img {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   text-decoration: none;
-  font-size: 14px;
-  line-height: 1.7;
 }
 
 .footer .logotype {
@@ -416,4 +471,28 @@ img {
 
 .tel-number {
   margin-top: 9px;
+}
+
+.footer-icons-block {
+  justify-content: center;
+  text-align: center;
+
+  padding-top: 72px;
+  padding-bottom: 100px;
+}
+
+.follow {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--hero-text-color);
+}
+
+.footer-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-link > .icon {
+  fill: var(--hero-text-color);
 }
