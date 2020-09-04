@@ -466,6 +466,7 @@ img {
 .clients.link:hover,
 .clients.link:focus {
   color: var(--accent-text-color);
+  border: 1px solid var(--accent-text-color);
 }
 
 .clients.link:hover .label,
